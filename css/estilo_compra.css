@@ -86,90 +86,53 @@ main {
 }
 .h22{
     color: red;
-    font-size: 3.5em;
-    margin-top: -11%;
+    font-size: 2.5em;
+    margin-top: -8%;
 
 
 }
-.producto-detalle {
-    padding: 30px;
+/* Asegúrate de que el HTML esté dentro de un contenedor con clase 'container' */
+.container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
-    text-align: left;
-    
-    
+    align-items: center;
 }
 
-
-.producto-detalle img {
-    max-width: 280px;
-    margin-right: 20px;
+form {
+    background-color: #d2e0d5; /* Fondo verde */
+    color: green; /* Color del texto */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px; /* Ancho máximo del formulario */
+    width: 100%; /* Ancho completo hasta el máximo definido */
 }
 
-.descripcion_pro h1 {
-    margin-top: -70px;
-    font-size: 3.0em;
-    color: green;
-    flex-direction: column;
-    
-}
-
-.descripcion_pro p {
-    
-    font-size: 20px;
-    max-width: 600px;
-    text-align: justify;
-    flex-direction: column;
-}
-.producto-precio-carrito{
-    margin: 10px;
-    padding: 5px;
-    align-self: flex-end;
-}
-.precio{
-    
-    padding: 0px;
-    align-self: flex-end;
-    color: green;
-    font-size: 2.0em;
-}
-
-.producto-precio-carrito a {
-    display: inline-block;
-    padding: 6px 13px;
-    background-color: #ffffff;
-    color: rgb(8, 8, 8);
-    text-decoration: none;
-    border-radius: 10px;
-    border: 3px solid #787471;
-    margin-top: -15px;
-    font-weight: 600;
-    font-size: 1.2em;
-}
-
-.producto-detalle a:hover {
-    background-color: #a49e99e2;
-}
-
-section {
-    text-align: center;
-    margin-top: 6px;
-}
-
-section a {
-    color: red;
-    text-decoration: none;
+form label {
+    display: block;
+    margin-bottom: 8px;
     font-weight: bold;
-    font-size: 1.3em;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: calc(100% - 10px); /* Ancho total menos el padding */
     padding: 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-section a:hover {
-    text-decoration: underline;
+form input[type="submit"] {
+    background-color: #155724; /* Un verde más oscuro para el botón */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-
-
+form input[type="submit"]:hover {
+    background-color: #0d3d00; /* Verde aún más oscuro al pasar el ratón */
+}

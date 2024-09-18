@@ -1,19 +1,35 @@
 body {
-    font-family: Arial, sans-serif;
+    background-image: url('/img/fondo2.jpg'); 
+    background-position: top center;
+    background-size: 100%; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 header {
-    background-color: #f8f9fa;
-    padding: 20px;
+    padding: 25px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* Cambia 'center' a 'flex-start' para alinear hacia arriba */
+}
+.logo {
+    width: 230px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 30px;
+ /* Añade un poco de espacio a la derecha para separarlo del contenido */
+}
+
+
+nav img {
+    max-width: 100%; /* Asegura que el logo no exceda el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
 
 nav ul {
@@ -24,33 +40,68 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 80px; /* Aumenta la distancia entre los elementos */
+    padding-top: 10px;
+    margin-right: 40px;
 }
 
+
 nav ul li a {
+
     text-decoration: none;
-    color: #333;
+    color: #ec1616;
+    font-size: 25px;
+    font-weight: 500;
 }
 
 .cart {
     display: flex;
-    align-items: center;
+    padding-right: 20px; 
 }
 
-.cart img {
-    width: 40px;
+.cart svg {
+    width: 60px; 
+    height: 60px;
+    fill: red;
 }
 
-.cart span {
-    margin-left: 5px;
-    font-size: 18px;
+main {
+    padding: 20px;
+}
+
+.titulo{
+    display: flex;
+    width: 45%;
+    justify-content: center;
+    margin-left: 570px;
+    flex-direction: column;
+    margin-top: -16.0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        
+}
+.h11{
+    font-size: 4.5em;
+    color: green;
+    
+}
+.h22{
+    color: red;
+    font-size: 2.8em;
+    margin-top: -7%;
+
+
 }
 
 .redes {
     display: flex; /* Utiliza Flexbox para alinear los elementos */
     justify-content: center; /* Centra los íconos horizontalmente */
-    gap: 20px; /* Espacio entre los íconos */
-    margin-top: 20px; /* Espacio superior para separar del contenido anterior */
+    margin-left: 100px;
+    gap: 30px; /* Espacio entre los íconos */
+    margin-top: 150px; /* Espacio superior para separar del contenido anterior */
+}
+.redes img{
+    width: 120px;
+    height: 120px;
 }
 
 .redes svg {

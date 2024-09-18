@@ -5,7 +5,7 @@ $username = 'root';      // Nombre de usuario de MySQL
 $password = '';          // Contraseña de MySQL
 
 try {
-    // Crear una nueva instancia de PDO (PHP Data Objects)
+    // Crear una nueva instancia de PDO 
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
     
     // Configurar PDO para que lance excepciones en caso de error
