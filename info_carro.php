@@ -23,6 +23,8 @@ $total = 0;
                 <li><a href="productos.php">Productos</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contacto.html">Contactanos</a></li>
+                <li><a href="login_admin.php">admin</a></li>
+
             </ul>
             <div class="cart" onclick="window.location.href='info_carro.php'">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
@@ -39,7 +41,6 @@ $total = 0;
 
     <main class="productos">
         <?php
-        // Verificar si el carrito tiene productos
         if (isset($_SESSION['carrito']) && !empty($_SESSION['carrito'])) {
             echo '<ul>';
             foreach ($_SESSION['carrito'] as $index => $producto) {
@@ -50,13 +51,13 @@ $total = 0;
                 echo '<div>';
                 echo '<h2>' . htmlspecialchars($producto['nombre']) . '</h2>';
                 echo '<p>' . htmlspecialchars($producto['descripcion']) . '</p>';
-                echo '<p>Precio: $' . htmlspecialchars($producto['precio']) . '</p>';
+                echo '<p class="precio"> $' . htmlspecialchars($producto['precio']) . '</p>';
                 echo '<a href="eliminar_producto.php?index=' . $index . '" class="btn-eliminar">Eliminar</a>'; // Botón para eliminar producto
                 echo '</div>';
                 echo '</li>';
             }
             echo '</ul>';
-            echo '<p><strong>Total: $' . number_format($total, 2) . '</strong></p>'; // Mostrar el total
+            echo '<p class="total"><strong>Total: $' . number_format($total, 2) . '</strong></p>'; // Mostrar el total
             echo '<a href="proceso_compra.php" class="btn-procesar">Procesar Compra</a>'; // Botón para procesar la compra
         } else {
             echo "<p>El carrito está vacío.</p>";

@@ -1,14 +1,15 @@
 /* Estilos generales */
 body {
     background-image: url('/img/fondo.png'), url('/img/image001.png'); /* Dos imágenes de fondo */
-    background-position: top left, bottom right; /* Ubica la primera imagen en la parte superior izquierda y la segunda en la parte inferior derecha */
-    background-size: 95%, 75%; /* La primera imagen tendrá un tamaño de 55px y la segunda ocupará el 75% del área disponible */
-    background-repeat: no-repeat, no-repeat; /* Ninguna de las imágenes se repetirá */
-    background-attachment: fixed; /* Mantiene las imágenes fijas cuando se hace scroll */
+    background-position: top left, bottom right;
+    background-size: 95%, 75%; 
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed; 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 header {
@@ -18,19 +19,19 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Cambia 'center' a 'flex-start' para alinear hacia arriba */
+    align-items: flex-start;
 }
 .logo {
-    width: 220px; /* Ajusta el tamaño del logo */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 220px; 
+    height: auto;
     margin-left: 30px;
- /* Añade un poco de espacio a la derecha para separarlo del contenido */
+ 
 }
 
 
 nav img {
-    max-width: 100%; /* Asegura que el logo no exceda el contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 100%;
+    height: auto; 
 }
 
 nav ul {
@@ -41,7 +42,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 80px; /* Aumenta la distancia entre los elementos */
+    margin-left: 80px; 
     padding-top: 10px;
     margin-right: 40px;
 }
@@ -57,8 +58,8 @@ nav ul li a {
 .cart {
     padding: 0px;
     display: flex;
-    justify-content: flex-end; /* Alinea el carrito a la derecha */
-    padding-right: 20px; /* Espacio del carrito desde el borde derecho */
+    justify-content: flex-end; 
+    padding-right: 20px; 
 }
 
 .cart svg {
@@ -82,7 +83,7 @@ nav ul li a {
 .H12{
     color: red;
     font-size: 3.9em;
-    margin-top: -9.5%;
+    margin-top: -8.3%;
     margin-left: 70px;
 }
 .parrafo{

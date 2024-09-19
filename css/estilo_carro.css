@@ -7,8 +7,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 
 header {
     padding: 25px;
@@ -92,12 +93,11 @@ main {
 
 }
 .productos {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .productos ul {
@@ -108,7 +108,6 @@ main {
 .productos li {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ddd;
     padding: 10px 0;
 }
 
@@ -123,52 +122,88 @@ main {
 
 .productos h2 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 3.0rem;
+    color: green;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .productos p {
     margin: 5px 0;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }
-
+.precio {
+    
+    margin: 5px 0;
+    text-align: right; 
+    font-weight: bold;
+    color: green;
+    font-size: 1.2em;
+}
 .btn-eliminar {
-    display: inline-block;
-    background-color: #f44336;
-    color: white;
+    display: flex;
+    width: 60px;
+    background-color: #eddedd;
+    color: rgb(26, 26, 26);
     padding: 5px 10px;
     text-decoration: none;
     border-radius: 4px;
+    margin-left: auto;
+    
 }
 
 .btn-eliminar:hover {
-    background-color: #d32f2f;
+    background-color: #be5b5bdb;
 }
 
 .total {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.total p {
     font-size: 1.2rem;
     font-weight: bold;
+    justify-content: flex-end;
+    padding: 8px;
+    color: green;
+    font-size: 20px;
 }
 
+
+
 .btn-procesar {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
+    top: 5px;
+    display: flex;
+    width: 140px;
+    color: rgb(10, 10, 10);
+    padding: 8px 15px;
     text-decoration: none;
-    border-radius: 4px;
-    font-size: 1.2rem;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    margin-left: auto;
+    text-align: center;
+    border: 3px solid grey;
+    font-weight: 700;
+    
 }
 
 .btn-procesar:hover {
-    background-color: #388e3c;
+    background-color: #9db19e;
 }
+
 
 section {
     text-align: center;
-    margin: 20px 0;
+    margin-top: 6px;
+}
+
+section a {
+    color: rgb(30, 18, 18);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+section a:hover {
+    text-decoration: underline;
 }

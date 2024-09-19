@@ -1,0 +1,147 @@
+body {
+    background-image: url('/img/fondo2.jpg'); 
+    background-position: top left;
+    background-size: 100%; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    padding: 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Cambia 'center' a 'flex-start' para alinear hacia arriba */
+}
+.logo {
+    width: 150px; /* Ajusta el tamaño del logo */
+    height: auto; 
+    margin-left: 30px;
+}
+
+
+nav img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+nav h1 {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ec1616;
+    font-size: 25px;
+    font-weight: 500;
+    justify-content: center;
+    padding-top: 10px;
+
+}
+nav a{
+    text-decoration: none;
+    color: #ed2525;
+    font-size: 20px;
+    font-weight: 500;
+}
+nav a:hover{
+    background-color: rgb(206, 164, 164);
+    color: rgb(9, 8, 8);
+}
+/* Estilos para los formularios */
+form {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+form input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Estilo para los mensajes de error */
+form .error {
+    color: red;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Estilos específicos para la página de eliminación */
+.delete-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.delete-message a {
+    color: #721c24;
+    text-decoration: underline;
+}
+
+.delete-message a:hover {
+    color: #f5c6cb;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    form label {
+        font-size: 14px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"] {
+        font-size: 14px;
+    }
+
+    form input[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

@@ -1,11 +1,9 @@
 <?php
-session_start(); // Iniciar la sesión
+session_start(); 
 
-// Verificar si el parámetro 'id' está presente en la URL
 if (isset($_GET['id'])) {
     $id_producto = $_GET['id'];
 
-    // Conexión a la base de datos
     $host = 'localhost';
     $dbname = 'dulceria';
     $username = 'root';
@@ -15,7 +13,6 @@ if (isset($_GET['id'])) {
         $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // Consulta para traer los detalles del producto con el id correspondiente
         $query = "SELECT nombre, descripcion, precio, imagen_url FROM producto WHERE producto_id = :producto_id";
         $stmt = $pdo->prepare($query);
         $stmt->bindParam(':producto_id', $id_producto, PDO::PARAM_INT);

@@ -1,15 +1,35 @@
+<?php
+session_start();
+
+include 'conexion.php'; 
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT * FROM admins WHERE email = '$email' AND password = '$password'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) == 1) {
+        $_SESSION['admin_logged_in'] = true;
+        header('Location: admin/index.php');
+        exit();
+    } else {
+        $error = "Nombre de usuario o contraseña incorrectos";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Online</title>
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="icon" href="img/logo.png">
+    <title>Login Administrador</title>
+    <link rel="stylesheet" href="css/estilo_blog.css">
 </head>
 <body>
-    
-    <header>
+<header>
         <nav>
             <img class="logo" src="img/logo.png" alt="Logo">
             <ul>
@@ -27,25 +47,20 @@
             </div>
         </nav>
     </header>
-    <main class="maihncontainer">
-        <div class="div1">
-            <h1 class="H11">HECHOS</h1>
-            <h1 class="H12">ARTESANALMENTE</h1>
-            <p class="parrafo">Descubre la esencia de nuestras raices en cada uno de nuestros dulces, hechos a mano con recetas tradicionales y los ingredientes mas puros. Sabores autenticos que evocan recuerdos y celebran nuestras costumbres.</p>
-            <div class="contButton">
-                <button class="btnsave" onclick="window.location.href='productos.php'">COMPRAR AHORA</button>
-            </div>
-            
-        </div>
-        <div class="div2">
-            <div class="imgcont">
-                <img src="img/image003.png" alt="Imagen">
-            </div>
-        </div>
-        
-
-    </main>
+    <div class="titulo">
+        <h1 class="h11">Inicio de sesión </h1>
+        <h1 class="h22">Administrador</h1>
+    </div>
+    <form action="login_admin.php" method="post">
+        <label for="email">Usuario:</label>
+        <input type="text" name="email" placeholder=" Email" required>
+        <br>
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <br>
+        <input type="submit" value="Iniciar sesión">
+    </form>
     
-
+    <?php if (isset($error)) { echo "<p>$error</p>"; } ?>
 </body>
 </html>

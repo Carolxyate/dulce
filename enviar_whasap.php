@@ -1,9 +1,7 @@
 <?php
 session_start(); 
 
-// Verificar si el formulario fue enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Recoger los datos del formulario
     $nombre_completo = $_POST['nombre_completo'];
     $telefono = $_POST['telefono'];
     $ciudad = $_POST['ciudad'];
@@ -11,9 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $direccion = $_POST['direccion'];
     $email = $_POST['email'];
 
-    // Verificar si el carrito tiene productos
     if (!empty($_SESSION['carrito'])) {
-        // Conexión a la base de datos
         $host = 'localhost';
         $dbname = 'dulceria';
         $username = 'root';
@@ -23,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            // Insertar los datos de la compra en la base de datos
             $query = "INSERT INTO compra (carrito_id, nombre_completo, telefono, ciudad, barrio, direccion, email) VALUES (:carrito_id, :nombre_completo, :telefono, :ciudad, :barrio, :direccion, :email)";
             $stmt = $pdo->prepare($query);
             $carrito_id = session_id(); 
@@ -55,10 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $whatsapp_number = '3015155392'; 
             $url = 'https://wa.me/' . $whatsapp_number . '?text=' . urlencode($mensaje);
 
-            // Limpiar el carrito después de la compra
             unset($_SESSION['carrito']);
 
-            // Redirigir a WhatsApp
             header("Location: $url");
             exit();
 

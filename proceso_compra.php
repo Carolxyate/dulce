@@ -1,7 +1,5 @@
 <?php
-session_start(); // Iniciar la sesión
-
-// Verificar si el carrito tiene productos
+session_start(); 
 if (empty($_SESSION['carrito'])) {
     header("Location: info_carro.php");
     exit();
@@ -40,29 +38,31 @@ if (empty($_SESSION['carrito'])) {
         <h1 class="h22">DE COMPRAS</h1>
     </div>
     <div class="container">
-        <main>
-            <form action="enviar_whasap.php" method="post">
-                <label for="nombre_completo">Nombre Completo:</label>
-                <input type="text" id="nombre_completo" name="nombre_completo" required>
+    <main>
+        <form action="enviar_whasap.php" method="post">
+            <label for="nombre_completo">Nombre Completo:</label>
+            <input type="text" id="nombre_completo" name="nombre_completo" placeholder="Nombre Completo" required>
 
-                <label for="telefono">Teléfono:</label>
-                <input type="text" id="telefono" name="telefono" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" placeholder="Teléfono" required>
 
-                <label for="ciudad">Ciudad:</label>
-                <input type="text" id="ciudad" name="ciudad" required>
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
 
-                <label for="barrio">Barrio:</label>
-                <input type="text" id="barrio" name="barrio" required>
+            <label for="barrio">Barrio:</label>
+            <input type="text" id="barrio" name="barrio" placeholder="Barrio" required>
 
-                <label for="direccion">Dirección:</label>
-                <input type="text" id="direccion" name="direccion" required>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" placeholder="Dirección" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
 
-                <input type="submit" value="Pagar">
-            </form>
-        </main>
-    </div>
+            <input type="submit" value="Pagar">
+        </form>
+    </main>
+</div>
+
+
 </body>
 </html>

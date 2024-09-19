@@ -1,0 +1,170 @@
+body {
+    background-image: url('/img/fondo2.jpg'); 
+    background-position: top left;
+    background-size: 100%; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    padding: 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Cambia 'center' a 'flex-start' para alinear hacia arriba */
+}
+.logo {
+    width: 150px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 30px;
+ /* Añade un poco de espacio a la derecha para separarlo del contenido */
+}
+
+
+nav img {
+    max-width: 100%; /* Asegura que el logo no exceda el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+nav h1 {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ec1616;
+    font-size: 25px;
+    font-weight: 500;
+    justify-content: center;
+    padding-top: 10px;
+
+}
+nav a{
+    text-decoration: none;
+    color: #3b2d2d;
+    font-size: 20px;
+    font-weight: 500;
+}
+nav a:hover{
+    background-color: rgb(206, 164, 164);
+    color: rgb(9, 8, 8);
+}
+
+
+/* Estilos del contenedor principal */
+.maincontainer {
+    margin: 60px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-title {
+    text-align: center;
+    font-size: 24px;
+    color: green;
+}
+
+/* Sección de administración */
+.admin-section {
+    margin: 20px 0;
+}
+
+.admin-section h2 {
+    color: green;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #333;
+}
+
+table td img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilo de los botones de acciones */
+.contButton {
+    text-align: left;
+}
+
+.btnsave {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btnsave:hover {
+    background-color: #218838;
+}
+
+/* Enlaces de acciones en tablas */
+table a {
+    margin-right: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+table a:hover {
+    color: #0056b3;
+}
+
+table a:last-child {
+    color: #dc3545;
+}
+
+table a:last-child:hover {
+    color: #c82333;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .maincontainer {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    header nav {
+        flex-direction: column;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .btnsave {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
