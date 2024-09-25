@@ -71,6 +71,7 @@ form label {
 
 form input[type="text"],
 form input[type="number"],
+form input[type="file"],
 form input[type="email"],
 form input[type="password"] {
     width: 100%;
@@ -135,6 +136,7 @@ form .error {
     }
 
     form input[type="text"],
+    form input[type="file"],
     form input[type="email"],
     form input[type="password"] {
         font-size: 14px;

@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute();
 
             // Crear mensaje para WhatsApp
-            $mensaje = "¡Nuevo pedido!\n";
+            $mensaje = "Buen dia ¡Nuevo pedido!\n";
             $mensaje .= "Nombre Completo: $nombre_completo\n";
             $mensaje .= "Teléfono: $telefono\n";
             $mensaje .= "Ciudad: $ciudad\n";

@@ -4,6 +4,12 @@ $dbname = 'dulceria';
 $username = 'root';
 $password = '';
 
+
+    $str = random_bytes(8);
+    $str = base64_encode($str);
+    $str = str_replace(["+", "/", "="], "", $str);
+    $str = substr($str, 0, 8);
+
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -25,7 +31,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Dulces</title>
-    <link rel="stylesheet" href="css/estilo_produc.css">
+    <link rel="stylesheet" href="css/estilo_produc.css?r=<?php echo $str; ?>">
     <link rel="icon" href="img/logo.png">
 </head>
 <body>

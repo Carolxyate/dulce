@@ -1,5 +1,5 @@
 <?php
-session_start(); // Iniciar la sesión
+session_start(); 
 
 if (isset($_GET['id'])) {
     $id_producto = $_GET['id'];
@@ -24,7 +24,21 @@ if (isset($_GET['id'])) {
                 $_SESSION['carrito'] = array();
             }
 
-            $_SESSION['carrito'][] = $producto;
+            $encontrado = false;
+            
+            foreach ($_SESSION['carrito'] as &$item) {
+                if ($item['producto_id'] == $producto['producto_id']) {
+                    $item['cantidad'] += 1;
+                    $encontrado = true;
+                    break;
+                }
+            }
+
+            if (!$encontrado) {
+                $producto['cantidad'] = 1; 
+                $_SESSION['carrito'][] = $producto;
+            }
+
             header("Location: info_carro.php");
             exit();
         } else {
