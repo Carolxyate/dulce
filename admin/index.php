@@ -81,7 +81,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
         </section>
         
         <section class="admin-section">
-            <h2>Gestión de Campos</h2>
+            <h2>Gestión de Ordenes</h2>
             <table border="1">
                 <thead>
                     <tr>
