@@ -58,11 +58,10 @@ nav ul li a {
     display: flex;
     padding-right: 20px; 
 }
-
 .cart svg {
-    width: 60px; 
-    height: 60px;
-    fill: red;
+    width: 45px; 
+    height: 45px;
+    fill: rgb(245, 40, 40);
 }
 
 main {
@@ -96,7 +95,7 @@ main {
     display: flex; /* Utiliza Flexbox para alinear los elementos */
     justify-content: center; /* Centra los íconos horizontalmente */
     margin-left: 100px;
-    gap: 30px; /* Espacio entre los íconos */
+    gap: 50px; /* Espacio entre los íconos */
     margin-top: 150px; /* Espacio superior para separar del contenido anterior */
 }
 .redes img{

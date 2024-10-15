@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $mensaje .= "\nTotal: $" . number_format(array_sum(array_column($_SESSION['carrito'], 'precio')), 2);
 
-            $whatsapp_number = '3015155392'; 
+            $whatsapp_number = '3202611616'; 
             $url = 'https://wa.me/' . $whatsapp_number . '?text=' . urlencode($mensaje);
 
             unset($_SESSION['carrito']);

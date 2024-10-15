@@ -62,9 +62,9 @@ nav ul li a {
 }
 
 .cart svg {
-    width: 60px; /* Ajusta el tamaño si es necesario */
-    height: 60px;
-    fill: red; /* Cambia el color del carrito a rojo */
+    width: 45px; /* Ajusta el tamaño si es necesario */
+    height: 45px;
+    fill: rgb(235, 47, 47); /* Cambia el color del carrito a rojo */
 }
 
 /* est prod */

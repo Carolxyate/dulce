@@ -17,19 +17,18 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Cambia 'center' a 'flex-start' para alinear hacia arriba */
+    align-items: flex-start; 
 }
 .logo {
-    width: 230px; /* Ajusta el tamaño del logo */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 230px; 
+    height: auto; 
     margin-left: 30px;
- /* Añade un poco de espacio a la derecha para separarlo del contenido */
 }
 
 
 nav img {
-    max-width: 100%; /* Asegura que el logo no exceda el contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 100%;
+    height: auto;
 }
 
 nav ul {
@@ -40,7 +39,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 80px; /* Aumenta la distancia entre los elementos */
+    margin-left: 80px;
     padding-top: 10px;
     margin-right: 40px;
 }
@@ -60,9 +59,9 @@ nav ul li a {
 }
 
 .cart svg {
-    width: 60px; 
-    height: 60px;
-    fill: red;
+    width: 45px; 
+    height: 45px;
+    fill: rgb(231, 59, 59);
 }
 
 main {
